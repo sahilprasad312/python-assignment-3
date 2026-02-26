@@ -7,7 +7,7 @@ def factorial(n):
         result *= i
     return result  
 
-sample_number = 5
-output = factorial(sample_number)
+number = int(input("Enter a number: ") )
+output = factorial(number)
 
-print(f"Factorial of {sample_number} is: {output}")
+print(f"Factorial of {number} is: {output}")
