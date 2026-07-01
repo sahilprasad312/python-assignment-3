@@ -1,12 +1,15 @@
 import math
 
-num = float(input("Enter a number: "))
 
-square_root = math.sqrt(num)
-natural_log = math.log(num)
-sine_value = math.sin(num)
+number = float(input("Enter a number: "))
 
-print("\nResults:")
-print("Square root:", square_root)
-print("Natural logarithm (log base e):", natural_log)
-print("Sine (in radians):", sine_value)
+if number <= 0:
+    print("Please enter a positive number for square root and logarithm calculations.")
+else:
+    square_root = math.sqrt(number)
+    natural_log = math.log(number)
+    sine_value = math.sin(number)
+
+    print(f"Square root: {square_root}")
+    print(f"Logarithm: {natural_log}")
+    print(f"Sine: {sine_value}")
