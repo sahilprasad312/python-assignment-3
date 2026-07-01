@@ -1,13 +1,18 @@
-def factorial(n):
-    if n < 0:
-        return "Factorial is not defined for negative numbers"
-    
+def factorial(number):
+    """Return the factorial of a non-negative integer."""
+    if number < 0:
+        raise ValueError("Factorial is not defined for negative numbers.")
+
     result = 1
-    for i in range(1, n + 1):
-        result *= i
-    return result  
+    for value in range(1, number + 1):
+        result *= value
 
-number = int(input("Enter a number: ") )
-output = factorial(number)
+    return result
 
-print(f"Factorial of {number} is: {output}")
+
+number = int(input("Enter a number: "))
+
+if number < 0:
+    print("Factorial is not defined for negative numbers.")
+else:
+    print(f"Factorial of {number} is: {factorial(number)}")
